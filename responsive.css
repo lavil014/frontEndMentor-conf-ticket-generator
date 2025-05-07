@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+  --Neutral0: hsl(0, 0%, 100%);
+  --Neutral300: hsl(252, 6%, 83%);
+  --Neutral500: hsl(245, 15%, 58%);
+  --Neutral700: hsl(245, 19%, 35%);
+  --Neutral900: hsl(248, 70%, 10%);
+  --Orange500: hsl(7, 88%, 67%);
+  --Orange700: hsl(7, 71%, 60%);
+}
+
+body{
+    background-image: url(/assets/images/background-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--Neutral0);
+    font-family:"Inconsolata",sans-serif;
+}
+
+.container{
+    border: solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+section{
+    border: solid white;
+    padding: 1rem;
+}
+
+.form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.8rem;
+   
+    .headers-container{
+      img{
+        width: 50%;
+      }
+
+      .first-paragraph{
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .second-paragraph{
+        font-size: 0.6rem;
+        font-weight: 100;
+        color: var(--Neutral300);
+      }
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0.8rem;
+      
+      label{
+        font-size: 0.7rem;
+        text-align: left;
+        font-weight: 100;
+      }
+
+
+      .drop-area{
+        background-color: var(--Neutral900);
+        border: dashed var(--Neutral700);
+        border-radius: 0.5rem;
+        padding: 0.6rem;
+
+        img{
+          background-color: var(--Neutral700);
+          border-radius: 0.5rem;
+          height: 50%;
+          padding: 0.3rem;
+        }
+
+        input[type = 'file']{
+          display: none;
+        }
+
+        p{
+          font-size: 0.7rem;
+          color: var(--Neutral300);
+        }
+
+      }
+
+      p{
+        color:  var(--Orange700);
+        font-size: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+
+        img{
+          background-color: transparent;
+          height: 60%;
+        }
+      }
+
+      input{
+        border: solid var(--Neutral0) 0.03rem;
+        background-color: var(--Neutral900);
+        padding: 0.5rem;
+        border-radius: 0.4rem;
+      }
+      
+      input[type ='email']{
+        border: solid var(--Orange700) 0.03rem;
+      }
+
+      .drop-area-error-message-image{
+        margin-right: 1.5rem;
+      }
+
+      .drop-area-error-message-email{
+        margin-right: 5rem;
+      }
+
+      button{
+        background-color: var(--Orange500);
+        padding: 0.7rem;
+        border: transparent;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+
+    
+}
