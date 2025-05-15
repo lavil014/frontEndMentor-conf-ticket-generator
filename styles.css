@@ -26,7 +26,6 @@
 
 body{
  font-family:"Inconsolata",sans-serif;
- background: linear-gradient(var(--Gradient-text-start), var(--Gradient-text-end));
 }
 
 .images-container{
@@ -67,7 +66,6 @@ body{
 
 .ticket-main-container{
   position: relative;
-  border: solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,13 +192,110 @@ body{
   align-items: center;
   justify-content: center;
   padding: 3rem;
+  border:  solid red;
+  padding: 5rem;
+  gap: 4rem;
+  background-image: url(/assets/images/background-desktop.png);
+
+  .ticket-header-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img[alt ='Coding-conf-logo']{
+    width: 20%;
+    margin-bottom: 2rem;
+  }
+
+  .profile-header{
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--Neutral0);
+    width: 60%;
+
+    span{
+      background: linear-gradient(to right, var(--Gradient-text-start), var(--Gradient-text-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .ticket-header{
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: var(--Neutral300);
+    text-align: center;
+    margin-top: 1rem;
+
+    span{
+      color: var(--Orange500);
+    }
+  }
+
+  .ticket-avatar-section{
+    
+
+    img[alt="pattern-ticket"]{
+      position: absolute;
+      width: 20%;
+      height: 20%;
+    }
+
+    .ticket-container{
+      position: relative;
+      color: var(--Neutral0);
+      display: flex;
+      flex-direction: column;
+      width: 150%;
+      padding: 0.7rem;
+
+      .conf-information{
+        padding: 1rem;
+
+        img{
+          width: 40%;
+        }
+        
+        p{
+          margin-top: -2rem;
+          margin-left: 3rem;
+        }
+      
+      }
+        
+
+      .profile-info{
+        display: flex;
+        padding: 1rem;
+        gap: 0.6rem;
+
+        img[alt='avatar-image']{
+          width: 10%;
+          border-radius: 0.5rem;
+        }
+
+        .avatar-info{
+
+          p{
+            font-size: 1.5rem;
+          }
+
+        }
+
+        .github-user{
+          display: flex;
+          gap: 0.5rem;
+
+          p{
+            font-size: 1rem;
+          }
+        }
+      } 
+     
+  }
 }
 
-.ticket-image-section{
-  border: solid red;
-  position: relative;
-}
-
-.ticket-section-user-information{
-  position: absolute;
 }
