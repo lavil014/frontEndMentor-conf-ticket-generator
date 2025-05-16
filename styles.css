@@ -192,7 +192,6 @@ body{
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  border:  solid red;
   padding: 5rem;
   gap: 4rem;
   background-image: url(/assets/images/background-desktop.png);
@@ -236,12 +235,16 @@ body{
   }
 
   .ticket-avatar-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 
     img[alt="pattern-ticket"]{
       position: absolute;
-      width: 20%;
-      height: 20%;
+      width: 28%;
+      height: 25%; 
     }
 
     .ticket-container{
@@ -249,14 +252,22 @@ body{
       color: var(--Neutral0);
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 150%;
       padding: 0.7rem;
+      gap: 2.5rem;
 
       .conf-information{
         padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 30%;
+        
 
         img{
-          width: 40%;
+          width: 35%;
         }
         
         p{
@@ -271,6 +282,7 @@ body{
         display: flex;
         padding: 1rem;
         gap: 0.6rem;
+        width: 30%;
 
         img[alt='avatar-image']{
           width: 10%;
@@ -299,3 +311,56 @@ body{
 }
 
 }
+
+
+
+@media (width <= 1024px){
+
+ .ticket-section{
+
+  .ticket-avatar-section{
+    border: blue solid;
+    
+
+    img[alt="pattern-ticket"]{
+      width: 40%;
+      height: 35%;
+    }
+
+    .ticket-container{
+      border: solid red;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+
+      .conf-information{
+        width: 50%;
+        border: green solid;
+
+        p{
+          margin-left: 1.7rem;
+        }
+      }
+
+      .profile-info{
+        width: 50%;
+        border: yellow solid;
+      }
+
+
+    }
+  }
+ }
+
+}
+
+@media (width <= 768px){
+
+  
+}
+
+@media (width <= 435px){
+
+  
+}
+
