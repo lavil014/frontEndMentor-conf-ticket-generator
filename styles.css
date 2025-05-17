@@ -317,6 +317,7 @@ body{
 @media (width <= 1024px){
 
  .ticket-section{
+    
 
   .ticket-avatar-section{
     border: blue solid;
@@ -354,13 +355,16 @@ body{
 
 }
 
-@media (width <= 768px){
-
-  
+@media (max-width: 435px){
+  .ticket-section{
+    background-color: red;
+  }
 }
+
 
 @media (width <= 435px){
 
   
 }
+
 
