@@ -320,8 +320,7 @@ body{
     
 
   .ticket-avatar-section{
-    border: blue solid;
-    
+  
 
     img[alt="pattern-ticket"]{
       width: 40%;
@@ -329,14 +328,12 @@ body{
     }
 
     .ticket-container{
-      border: solid red;
       padding: 1.5rem;
       display: flex;
       gap: 1rem;
 
       .conf-information{
         width: 50%;
-        border: green solid;
 
         p{
           margin-left: 1.7rem;
@@ -345,7 +342,6 @@ body{
 
       .profile-info{
         width: 50%;
-        border: yellow solid;
       }
 
 
@@ -355,16 +351,58 @@ body{
 
 }
 
-@media (max-width: 435px){
-  .ticket-section{
-    background-color: red;
+@media (width <= 769px){
+
+
+  .ticket-section {
+      
+    
+    .ticket-avatar-section {
+      width: 100%;
+    }
+    
+    .ticket-avatar-section img[alt = "pattern-ticket" ]{
+      width: 45%;
+    }
+
+    .ticket-avatar-section .ticket-container .conf-information{
+      width: 60%;
+      margin-top: 1rem;
+    }
+
+    .ticket-avatar-section .ticket-container .profile-info{
+      width: 60%;
+
+      img[alt = "avatar-image"]{
+        width: 16%;
+        height: 16%;
+      }
+    }
+  }
+  
+  .ticket-section .ticket-avatar-section .ticket-container .profile-info p {
+    font-size: 0.8rem !important;
   }
 }
 
 
-@media (width <= 435px){
+@media (width <= 426px){
 
-  
+
+  .ticket-section .ticket-avatar-section img[alt="pattern-ticket"]{
+    width: 68%;
+  }
+
+  .ticket-section .ticket-avatar-section .ticket-container .conf-information {
+    width: 120%;
+    font-size: 0.8rem;
+    margin-left: -2rem;
+  }
+
+    .ticket-section .ticket-avatar-section .ticket-container .profile-info{
+      width: 120%;
+      margin-left: -2rem;
+      margin-bottom: 1rem;
+    }
+
 }
-
-
