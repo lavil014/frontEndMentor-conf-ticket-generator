@@ -70,6 +70,7 @@ body{
   align-items: center;
   justify-content: center;
   height: 100dvh;
+  z-index: 1;
 }
 
 .form-container{
@@ -187,7 +188,13 @@ body{
 
 
 .ticket-section{
-  display: flex;
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -195,6 +202,8 @@ body{
   padding: 5rem;
   gap: 4rem;
   background-image: url(/assets/images/background-desktop.png);
+  
+  
 
   .ticket-header-section{
     text-align: center;
@@ -388,6 +397,10 @@ body{
 
 @media (width <= 426px){
 
+  
+  .images-container{
+    background-image: url(/assets/images/background-mobile.png);
+  }
 
   .ticket-section .ticket-avatar-section img[alt="pattern-ticket"]{
     width: 68%;
