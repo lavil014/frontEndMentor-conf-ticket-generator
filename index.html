@@ -27,7 +27,7 @@
         </p>
         <p class="second-paragraph">Secure your spot next year's biggest coding conference.</p>
       </div>
-      <form action="">
+      <form id="main-form" action="">
         <label for="">Upload Avatar</label>
         <div class="drop-area">
           <img src="/assets/images/icon-upload.svg" alt="Upload-icon">
@@ -36,25 +36,25 @@
         </div>
         <p class="drop-area-error-message-image"><img src="/assets/images/icon-info.svg" alt="information-icon">File too large. Please upload a photo under 500KB.</p>
         <label for="">Full Name</label>
-        <input type="text">
+        <input id="fullName" type="text">
         <label for="">Email Address</label>
-        <input type="email" placeholder="example@email.com">
+        <input id="emailAddress" type="email" placeholder="example@email.com">
         <p class="drop-area-error-message-email"><img src="/assets/images/icon-info.svg" alt="information-icon">Please enter a valid email address.</p>
         <label for="">Github Username</label>
-        <input type="text" placeholder="@yourusername">
+        <input id="githubUser" type="text" placeholder="@yourusername">
         <button type="submit">Generate My Ticket</button>
       </form>
     </section>
 
   </main>
-  <main class="ticket-section">
+  <main id="ticketSection" class="ticket-section">
       <section class="ticket-header-section">
         <img src="/assets/images/logo-full.svg" alt="Coding-conf-logo">
-        <p class="profile-header">Congrats, <span> Jonathan Kristoff!
+        <p class="profile-header">Congrats, <span id="displayedFullname"> Jonathan Kristoff!
         </span> Your ticket is ready.
         </p>
         <p class="ticket-header">We've emailed your ticket to
-        <span>jonathan@email.com</span> and will send <br>
+        <span id="displayedEmailaddress">jonathan@email.com</span> and will send <br>
         updates in the run up to the event.
         </p>
       </section>
@@ -68,9 +68,9 @@
           <div class="profile-info">
             <img src="/assets/images/image-avatar.jpg" alt="avatar-image">
             <div class="avatar-info">
-              <p>Jonathan Kristoff</p>
+              <p id="ticketUser">Jonathan Kristoff</p>
               <div class="github-user">
-                <img src="/assets/images/icon-github.svg" alt="Github-icon"><p>
+                <img src="/assets/images/icon-github.svg" alt="Github-icon"><p id="ticketGithub">
                   @jonathankristoff0101
               </p>
               </div>
@@ -81,5 +81,7 @@
         </div>
       </section>
   </main>
+
+  <script  type="module" src="/scripts/main.js"></script>
 </body>
 </html>
