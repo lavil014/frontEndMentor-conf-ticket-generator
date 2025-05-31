@@ -163,7 +163,7 @@ body{
         color: var(--Neutral0);
       }
       
-      input[type ='email']{
+      .email-error{
         border: solid var(--Orange700) 0.03rem;
       }
 
