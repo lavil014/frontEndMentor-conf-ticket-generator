@@ -12,16 +12,7 @@ const displayedEmailaddress = document.getElementById('displayedEmailaddress');
 
 import { updateUI } from "./updateUI.js";
 
-
-
-
-
-
-
 //Necesito hacer una funcion para que cuando haga submit al form los datos de los inputs se puedan capturar y mostrar en la seccion de el ticket
-
-
-
 
 const validateForm = (emailAddress)=>{
 
@@ -29,12 +20,12 @@ const validateForm = (emailAddress)=>{
   let emailAddressInput = document.getElementById('emailAddress');
 
   if(!emailRegex.test(emailAddress)){
-    console.log('Add a valid email address')
     emailAddressInput.classList.add('.email-error');
+  } else{
+    ticketSection.style.display = 'flex';
   }
 
-  // Me quede aca , necesito que la funcion no me muestre el section del ticket si no se cunmple la condicion.
-
+ 
 }
 
 const submitForm = (e)=>{
@@ -47,10 +38,6 @@ const submitForm = (e)=>{
   let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   validateForm(emailAddress);
-
-  console.log({fullName,emailAddress,githubUser});
-
-  ticketSection.style.display = 'flex';
   updateUI(fullName,emailAddress,githubUser);
 
 }
