@@ -168,11 +168,13 @@ body{
       }
 
       .drop-area-error-message-image{
-        margin-right: 1.5rem;    
+        margin-right: 1.5rem;
+        display: none;
       }
 
       .drop-area-error-message-email{
         margin-right: 5rem;
+        display: none;
       }
 
       button{

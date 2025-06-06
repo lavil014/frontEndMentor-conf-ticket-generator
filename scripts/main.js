@@ -2,31 +2,24 @@
 // Global consts
 
 const form = document.getElementById('main-form');
-const ticketSection = document.getElementById('ticketSection');
 const displayedFullname = document.getElementById('displayedFullname');
 const displayedEmailaddress = document.getElementById('displayedEmailaddress');
 
 
 
-//Imports from modules
+
+
+const inputFile = document.getElementById('inputFile');
+const dropArea = document.getElementById('dropArea');
+
+//Imports from scripts folder
 
 import { updateUI } from "./updateUI.js";
+import { validateForm } from "./validateForm.js";
+import { imageHandler , inputtoClick } from "./imageHandler.js";
 
-//Necesito hacer una funcion para que cuando haga submit al form los datos de los inputs se puedan capturar y mostrar en la seccion de el ticket
+/*Necesito una funcion que me ayude a cargar la imagen y mostrarla en el tag de image en HTML*/
 
-const validateForm = (emailAddress)=>{
-
-  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  let emailAddressInput = document.getElementById('emailAddress');
-
-  if(!emailRegex.test(emailAddress)){
-    emailAddressInput.classList.add('.email-error');
-  } else{
-    ticketSection.style.display = 'flex';
-  }
-
- 
-}
 
 const submitForm = (e)=>{
   e.preventDefault()
@@ -35,8 +28,6 @@ const submitForm = (e)=>{
   let emailAddress = document.getElementById('emailAddress').value.trim();
   let githubUser = document.getElementById('githubUser').value.trim();
 
-  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   validateForm(emailAddress);
   updateUI(fullName,emailAddress,githubUser);
 
@@ -44,3 +35,6 @@ const submitForm = (e)=>{
 
 form.addEventListener('submit', submitForm);
 
+
+inputtoClick(inputFile);
+imageHandler()

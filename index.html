@@ -29,17 +29,17 @@
       </div>
       <form id="main-form" action="">
         <label for="">Upload Avatar</label>
-        <div class="drop-area">
+        <div id="dropArea" class="drop-area">
           <img src="/assets/images/icon-upload.svg" alt="Upload-icon">
-          <input type="file" name="" id="">
+          <input id="inputFile" type="file" name="">
           <p>Drag and drop or click to upload</p>
         </div>
-        <p class="drop-area-error-message-image"><img src="/assets/images/icon-info.svg" alt="information-icon">File too large. Please upload a photo under 500KB.</p>
+        <p id="dropareaMessageerror" class="drop-area-error-message-image"><img src="/assets/images/icon-info.svg" alt="information-icon">File too large. Please upload a photo under 500KB.</p>
         <label for="">Full Name</label>
         <input id="fullName" type="text">
         <label for="">Email Address</label>
         <input id="emailAddress" type="email" placeholder="example@email.com">
-        <p class="drop-area-error-message-email"><img src="/assets/images/icon-info.svg" alt="information-icon">Please enter a valid email address.</p>
+        <p id="email-error-message" class="drop-area-error-message-email"><img src="/assets/images/icon-info.svg" alt="information-icon">Please enter a valid email address.</p>
         <label for="">Github Username</label>
         <input id="githubUser" type="text" placeholder="@yourusername">
         <button type="submit">Generate My Ticket</button>
@@ -66,7 +66,7 @@
             <p>Jan 31, 2025 / Austing, TX</p>
           </div>
           <div class="profile-info">
-            <img src="/assets/images/image-avatar.jpg" alt="avatar-image">
+            <img  id="avatarImage" src="/assets/images/image-avatar.jpg" alt="avatar-image">
             <div class="avatar-info">
               <p id="ticketUser">Jonathan Kristoff</p>
               <div class="github-user">
