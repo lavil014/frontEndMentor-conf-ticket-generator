@@ -300,7 +300,7 @@ body{
         gap: 0.6rem;
         width: 30%;
 
-        img[alt='avatar-image']{
+        img[alt='Avatar-image']{
           width: 10%;
           border-radius: 0.5rem;
         }
