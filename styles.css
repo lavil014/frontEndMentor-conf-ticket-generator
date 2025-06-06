@@ -137,6 +137,11 @@ body{
 
       }
 
+      .drop-area-dragover-efect{
+        border: var(--Orange500) dashed;
+        background-color: var(--Neutral700);
+      }
+
       p{
         color:  var(--Orange700);
         display: flex;

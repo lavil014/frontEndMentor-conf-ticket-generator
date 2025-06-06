@@ -2,6 +2,7 @@ const dropArea = document.getElementById('dropArea');
 const avatarImage = document.getElementById('avatarImage');
 const inputFile = document.getElementById('inputFile');
 const dropareaMessagerror = document.getElementById('dropareaMessageerror');
+const events = ['dragleave','dragover','dragenter','drop'];
 
 
 export const inputtoClick = (inputFile)=>{
@@ -10,7 +11,7 @@ export const inputtoClick = (inputFile)=>{
   })
 }
 
-const managedropArea = (dropArea)=>{
+const manageChangeEvent = (dropArea)=>{
   dropArea.addEventListener('change', ()=>{
   
   let file = inputFile.files[0];
@@ -24,6 +25,23 @@ const managedropArea = (dropArea)=>{
 })
 }
 
+events.forEach((event)=>{
+  dropArea.addEventListener(event, (e)=>{
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    if(event === 'drop'){
+     let file = e.dataTransfer.files[0];
+     console.log(file)
+      displayImage(file);
+    } else if(event === 'dragover'){
+      dropArea.classList.add('drop-area-dragover-efect');
+    } else if(event === 'dragleave'){
+      dropArea.classList.remove('drop-area-dragover-efect')
+    }
+  })
+})
 
 const displayImage = (file)=>{
   console.log('My displayImage function is working');
@@ -41,14 +59,11 @@ const displayImage = (file)=>{
   }
 }
 
-
-
-
 export const imageHandler = ()=>{
   console.log('My imageHandler function is working');
 
 
-  managedropArea(dropArea)
+  manageChangeEvent(dropArea)
 
  
 
